@@ -47,7 +47,7 @@
 #* *##if ($project.artifactId == 'nb-shared')
             <li> <strong $stylecompensate>Shared</strong> </li>
 #* *##else
-            <li> <a href="../nbm-shared/index.html">Shared</a> </li>
+            <li> <a href="../nb-shared/index.html">Shared</a> </li>
 #* *##end
 #* *##if ($project.artifactId == 'utilities-parent')
             <li> <strong $stylecompensate>Parent</strong> </li>
@@ -90,7 +90,7 @@ $bodyContent
 </div>
 <div class='footer-disclaimer'>
     <div class="footer-disclaimer-content">
-        <p>Copyright &copy; 2017-2019 <a href="https://www.apache.org">The Apache Software Foundation</a>.</p>
+        <p>Copyright &copy; 2017-2022 <a href="https://www.apache.org">The Apache Software Foundation</a>.</p>
         <p>Licensed under the Apache <a href="https://www.apache.org/licenses/">license</a>, version 2.0</p>
         <div style='max-width: 40em; margin: 0 auto'>
             <p>Apache, Apache NetBeans, NetBeans, the Apache feather logo and the Apache NetBeans logo are trademarks of <a href="https://www.apache.org">The Apache Software Foundation</a>.</p>
