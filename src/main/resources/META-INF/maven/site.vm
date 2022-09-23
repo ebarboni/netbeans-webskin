@@ -34,25 +34,12 @@
     <div class="top-bar-right">
         <ul class="vertical medium-horizontal menu" style="right: 90px;" data-responsive-menu="drilldown medium-dropdown">
 #* *##set( $stylecompensate = "style='line-height: 1;margin-bottom: 0;padding: 0.7rem 1rem;display: block;'" )
-#* *##if ($project.artifactId == 'nb-repository-plugin')
-            <li> <strong $stylecompensate >NB Repository Plugin</strong> </li>
+#* *##foreach( $menu in $decoration.body.links )
+#* *##if ($menu.href)
+           <li> <a href="$menu.href">$menu.name</a> </li>
 #* *##else
-            <li> <a href="../nb-repository-plugin/index.html">NB Repository Plugin</a> </li>
+           <li> <strong $stylecompensate >$menu.name</strong> </li>
 #* *##end
-#* *##if ($project.artifactId == 'nbm-maven-plugin')
-            <li> <strong $stylecompensate >NBM Plugin</strong> </li>
-#* *##else
-            <li> <a href="../nbm-maven-plugin/index.html">NBM Plugin</a> </li>
-#* *##end
-#* *##if ($project.artifactId == 'nb-shared')
-            <li> <strong $stylecompensate>Shared</strong> </li>
-#* *##else
-            <li> <a href="../nb-shared/index.html">Shared</a> </li>
-#* *##end
-#* *##if ($project.artifactId == 'utilities-parent')
-            <li> <strong $stylecompensate>Parent</strong> </li>
-#* *##else
-            <li> <a href="../parent/index.html">Parent</a> </li>
 #* *##end
         </ul>
     </div>
@@ -99,7 +86,8 @@ $bodyContent
         
     </div>
 </div>
-<a href="${project.scm.url}"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+#*  *##set ( $gitHubProjectId = $decoration.getCustomValue( 'NetBeanSkin.gitHub.projectId' ) )
+<a href="https://github.com/$gitHubProjectId"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
 
 
 
