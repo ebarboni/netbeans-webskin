@@ -20,6 +20,12 @@
         <system>jira</system>
         <url>https://issues.apache.org/jira/browse/NETBEANS</url>
     </issueManagement>
+    <distributionManagement>
+        <site>
+            <id>netbeans.bits</id>
+            <url>https://bits.netbeans.org/mavenutilities/netbeans-webskin</url>
+        </site>
+    </distributionManagement>
     <licenses>
         <license>
             <name>Apache License 2</name>
